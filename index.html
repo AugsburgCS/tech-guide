@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CS Student Tech Help — Mockup</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --paper: #F5F6F4;
+    --ink: #15181C;
+    --accent: #2F6F6B;
+    --muted: #8A9199;
+    --panel: #E8EBE7;
+    --line: #D8DCD8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .shell {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--line);
+    padding: 32px 24px;
+  }
+
+  .site-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+  }
+
+  .site-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 32px 0;
+  }
+
+  .nav-group {
+    margin-bottom: 24px;
+  }
+
+  .nav-heading {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 0 8px 0;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list li {
+    margin-bottom: 6px;
+  }
+
+  .nav-list a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13.5px;
+    color: var(--ink);
+    text-decoration: none;
+    display: block;
+    padding: 3px 0;
+  }
+
+  .nav-list a.active {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .nav-list a:hover {
+    color: var(--accent);
+  }
+
+  /* Main content */
+  .content {
+    flex: 1;
+    padding: 48px 56px;
+    max-width: 720px;
+  }
+
+  .breadcrumb {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+  }
+
+  .page-intro {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 36px 0;
+    max-width: 60ch;
+  }
+
+  h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 36px 0 12px 0;
+  }
+
+  p {
+    max-width: 65ch;
+    margin: 0 0 16px 0;
+  }
+
+  a { color: var(--accent); }
+
+  code {
+    font-family: 'IBM Plex Mono', monospace;
+    background: var(--panel);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+
+  pre {
+    background: var(--panel);
+    border-radius: 6px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    margin: 0 0 20px 0;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 24px 0 12px 0;
+  }
+
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+  }
+
+  .card-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: var(--ink);
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--panel);
+    padding: 12px 16px;
+    font-size: 14px;
+    margin: 20px 0;
+  }
+
+  .mockup-label {
+    position: fixed;
+    top: 12px;
+    right: 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="mockup-label">mockup — not live</div>
+
+<div class="shell">
+  <nav class="sidebar">
+    <p class="site-title">CS Student Help</p>
+    <p class="site-sub">setup guides & common fixes</p>
+
+    <div class="nav-group">
+      <p class="nav-heading">GETTING STARTED</p>
+      <ul class="nav-list">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Which laptop do I need?</a></li>
+        <li><a href="#">Installing Git</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-group">
+      <p class="nav-heading">CS 201 — SYSTEMS</p>
+      <ul class="nav-list">
+        <li><a href="#">AVR toolchain setup</a></li>
+        <li><a href="#">Makefiles across OSes</a></li>
+        <li><a href="#">avrdude troubleshooting</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-group">
+      <p class="nav-heading">CS 340 — WEB</p>
+      <ul class="nav-list">
+        <li><a href="#">Node & npm setup</a></li>
+        <li><a href="#">Common CORS errors</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-group">
+      <p class="nav-heading">GENERAL</p>
+      <ul class="nav-list">
+        <li><a href="#">PATH, explained</a></li>
+        <li><a href="#">Terminal basics</a></li>
+        <li><a href="#">Ask a question →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="content">
+    <p class="breadcrumb">CS 201 — Systems / Toolchain Setup</p>
+    <h1>Installing avr-gcc and avrdude</h1>
+    <p class="page-intro">
+      Set up the AVR compiler and flashing tool outside the Arduino IDE, so your Makefile-based
+      workflow works the same on a Mac or a Windows machine.
+    </p>
+
+    <div class="callout">
+      Using Git Bash on Windows? Start there — most commands below will match what your Mac
+      classmates are running.
+    </div>
+
+    <h2>Pick your OS</h2>
+    <div class="card-grid">
+      <a href="#" class="card">
+        <p class="card-title">macOS →</p>
+        <p class="card-desc">Homebrew install, two commands, no PATH editing.</p>
+      </a>
+      <a href="#" class="card">
+        <p class="card-title">Windows →</p>
+        <p class="card-desc">Manual download, extract, add to PATH.</p>
+      </a>
+    </div>
+
+    <h2>Quick check</h2>
+    <p>Once installed, confirm both tools are on your PATH:</p>
+    <pre><code>avr-gcc --version
+avrdude -v</code></pre>
+    <p>
+      If either command isn't found, see <a href="#">PATH, explained</a> before continuing.
+    </p>
+  </main>
+</div>
+
+</body>
+</html>
